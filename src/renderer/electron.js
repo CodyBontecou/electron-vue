@@ -1,6 +1,4 @@
 /** @type {import('electron').IpcRenderer} */
-const ipcRenderer = window.electron.ipcRenderer;
+const ipcRenderer = window.electron.ipcRenderer
 
-export {
-  ipcRenderer,
-}
+export { ipcRenderer }

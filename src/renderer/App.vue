@@ -5,10 +5,9 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 import Hello from './components/Hello.vue'
-import { ipcRenderer } from '@/electron';
-
+import { ipcRenderer } from '@/electron'
 
 export default defineComponent({
   name: 'app',
@@ -16,7 +15,7 @@ export default defineComponent({
     Hello,
   },
   setup() {
-    ipcRenderer.send('message', 'Hello from App.vue!');
+    ipcRenderer.send('message', 'Hello from App.vue!')
   },
 })
 </script>
