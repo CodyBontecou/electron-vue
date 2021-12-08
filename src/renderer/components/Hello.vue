@@ -1,7 +1,7 @@
 <template>
   <div id="hello">
     <img src="https://vuejs.org/images/logo.png" />
-    <h1>{{ message }}</h1>
+    <h1>{{ main.message }}</h1>
   </div>
 </template>
 
@@ -12,10 +12,9 @@ import { storeToRefs } from 'pinia'
 
 export default defineComponent({
   setup() {
-    const main = useMainStore()
-    const { message } = storeToRefs(main)
-
-    return { message }
+    return {
+      main: useMainStore(),
+    }
   },
 })
 </script>
