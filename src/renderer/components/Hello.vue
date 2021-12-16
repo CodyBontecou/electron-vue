@@ -1,19 +1,20 @@
 <template>
   <div id="hello">
     <img src="https://vuejs.org/images/logo.png" />
-    <h1>{{ main.message }}</h1>
+    <h1>{{ message }}</h1>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useMainStore } from '@/stores/main'
-import { storeToRefs } from 'pinia'
 
 export default defineComponent({
   setup() {
+    const main = useMainStore()
+
     return {
-      main: useMainStore(),
+      message: computed(() => main.message),
     }
   },
 })
