@@ -1,4 +1,5 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, globalShortcut, ipcMain } = require('electron')
+const emitter = require('./emitter.js')
 const Path = require('path')
 
 function createWindow() {
@@ -38,6 +39,10 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-ipcMain.on('message', (event, message) => {
-  console.log(message)
+// TODO: Blogpost on Electron keybinds
+ipcMain.on('setKeybind', (event, keybind) => {
+  globalShortcut.unregisterAll()
+  globalShortcut.register(keybind, () => {
+    console.log(keybind + ' pressed')
+  })
 })
