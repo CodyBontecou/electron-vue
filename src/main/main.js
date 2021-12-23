@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron')
 const Path = require('path')
 
 function createWindow() {
@@ -23,6 +23,9 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  globalShortcut.register('CommandOrControl+X', () => {
+    console.log('CommandOrControl+X was pressed!')
+  })
   createWindow()
 
   app.on('activate', function () {
@@ -36,8 +39,4 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
-})
-
-ipcMain.on('message', (event, message) => {
-  console.log(message)
 })
