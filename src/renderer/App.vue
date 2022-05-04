@@ -2,6 +2,7 @@
   <div id="app">
     <hello />
     <sound />
+    <person />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import { defineComponent } from 'vue'
 import Hello from './components/Hello.vue'
 import Sound from './components/Sound.vue'
+import Person from './components/Person.vue'
 import { ipcRenderer } from '@/electron'
 
 export default defineComponent({
@@ -16,6 +18,7 @@ export default defineComponent({
   components: {
     Hello,
     Sound,
+    Person,
   },
   setup() {
     ipcRenderer.send('message', 'Hello from App.vue!')
