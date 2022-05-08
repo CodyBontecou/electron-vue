@@ -6,5 +6,5 @@ import { createPinia } from 'pinia'
 createApp(App).use(createPinia()).mount('#app')
 
 if (process.env.NODE_ENV === 'development') {
-  devtools.connect(/* host, port */)
+  // devtools.connect(/* host, port */)
 }
