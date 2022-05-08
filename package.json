@@ -24,7 +24,11 @@
     "vite": "^2.6.10"
   },
   "dependencies": {
+    "@google-cloud/speech": "^4.10.2",
+    "@google-cloud/text-to-speech": "^3.4.0",
+    "@vueuse/core": "^8.4.2",
     "@vueuse/sound": "^1.1.7",
+    "node-record-lpcm16": "^1.0.1",
     "pinia": "^2.0.6",
     "vue": "^3.0.6"
   }
