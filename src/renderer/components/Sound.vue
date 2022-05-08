@@ -9,7 +9,7 @@ const { play } = useSound(buttonSfx)
 const interval = ref(4000)
 const { pause, resume, isActive } = useIntervalFn(() => {
   play()
-}, interval)
+}, interval, { immediate: false })
 </script>
 
 <template>
@@ -18,5 +18,5 @@ const { pause, resume, isActive } = useIntervalFn(() => {
     <input v-model="interval" type="number" placeholder="interval" />
   </p>
   <button v-if="isActive" class="orange" @click="pause">Pause</button>
-  <button v-if="!isActive" @click="resume">Resume</button>
+  <button v-if="!isActive" @click="resume">Play</button>
 </template>
