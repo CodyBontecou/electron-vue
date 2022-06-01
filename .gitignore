@@ -6,3 +6,5 @@ build
 .idea
 package-lock.json
 .DS_Store
+
+keys.json
