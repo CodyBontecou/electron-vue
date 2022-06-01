@@ -30,7 +30,7 @@ function createWindow() {
 app.whenReady().then(() => {
   let win = createWindow()
 
-  globalShortcut.register('CommandOrControl+X', () => {
+  globalShortcut.register('CommandOrControl+6', () => {
     main()
   })
 
