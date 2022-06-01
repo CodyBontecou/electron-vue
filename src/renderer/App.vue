@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <sound />
-    <notification />
-    <ul id="timers-container"></ul>
+  <div class="h-screen w-screen" id="app">
+    <div class="h-full w-full flex flex-col items-center justify-center">
+      <sound />
+      <notification />
+      <ul id="timers-container"></ul>
+    </div>
   </div>
 </template>
 
