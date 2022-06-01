@@ -14,13 +14,17 @@
     "url": "https://github.com/Deluze"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/cli": "^4.5.14",
     "@vue/devtools": "^6.0.0-beta.20",
+    "autoprefixer": "^10.4.7",
     "chalk": "^4.1.2",
     "chokidar": "^3.5.2",
     "electron": "^15.2.0",
     "electron-builder": "^22.13.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24",
     "vite": "^2.6.10"
   },
   "dependencies": {
